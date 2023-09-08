@@ -1,0 +1,11 @@
+{
+    "[latex]": {
+        "editor.wordWrap": "on"
+    },
+    "[latex-expl3]": {
+        "editor.wordWrap": "on"
+    },
+    "[tex]": {
+        "editor.wordWrap": "on"
+    },
+}
