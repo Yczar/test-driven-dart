@@ -1,0 +1,14 @@
+{
+    "[latex]": {
+        "editor.wordWrap": "on",
+        "editor.tabSize": 1
+    },
+    "[latex-expl3]": {
+        "editor.wordWrap": "on",
+        "editor.tabSize": 1
+    },
+    "[tex]": {
+        "editor.wordWrap": "on",
+        "editor.tabSize": 1
+    },
+}

@@ -1,5 +1,7 @@
 # Test Driven Dart
 
+[![CI](https://github.com/Yczar/test-driven-dart/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/Yczar/test-driven-dart/actions/workflows/build.yml)
+
 Welcome to Test Driven Dart! This repository is designed to guide Dart developers through the vast landscape of testing in Dart and Flutter, emphasizing a test-driven development (TDD) approach.
 
 ## Table of Contents

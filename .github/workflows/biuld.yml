@@ -1,0 +1,19 @@
+name: Build PDF
+
+
+on:
+  push:
+    branches:
+      - master
+    
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: test-driven-dart.tex
+          latexmk_use_lualatex: true

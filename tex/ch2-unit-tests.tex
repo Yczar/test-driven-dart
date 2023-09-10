@@ -1,0 +1,70 @@
+\section{Unit Tests}
+\subsection{Basics of Unit Tests}
+Unit testing focuses on verifying the correctness of individual units of source code, such as functions or methods, in isolation from the rest of the application. 
+In this section, we'll break down the fundamental concepts and practices of unit testing in Dart.
+
+\section*{What is a "Unit"?}
+In the context of testing, a "unit" refers to the smallest testable part of any software. 
+It can be an entire module or just a single function. 
+The primary goal is to validate that each unit of the software code performs as expected.
+
+\section*{Why Unit Testing?}
+
+\begin{enumerate}
+ \item \textbf{Quick Feedback}: Unit tests are generally fast and can be run frequently, providing immediate feedback to developers.
+ \item \textbf{Improved Design}: Writing tests often leads to better code design and modularity.
+ \item \textbf{Easier Refactoring}: Tests ensure that refactoring doesn't introduce regressions.
+ \item \textbf{Documentation}: Tests can serve as documentation, showcasing how a piece of code is expected to behave.
+\end{enumerate}
+
+\section*{Writing a Unit Test in Dart}
+
+\fakesubsection{1. Choose the Unit to Test}
+Decide on a function or method that you want to test. For this example, let's consider a simple function that returns the sum of two numbers:
+
+\begin{dartcode}
+int sum(int a, int b) {
+  return a + b;
+}
+\end{dartcode}
+
+\fakesubsection{2. Decide on Test Cases}
+Think about the different inputs this function can have and what the expected outputs are. 
+For our sum function:
+\begin{itemize}
+ \item sum(3, 4) should return 7.
+ \item sum(-3, 4) should return 1.
+\end{itemize}
+
+\begin{dartcode}
+import 'package:test/test.dart';
+import 'path_to_your_function.dart';  // Adjust this import path
+ 
+void main() {
+  test('Positive numbers', () {
+    expect(sum(3, 4), 7);
+  });
+ 
+  test('Mix of negative and positive numbers', () {
+    expect(sum(-3, 4), 1);
+  });
+}
+\end{dartcode}
+Run the tests using \incode{dart test} in your terminal.
+
+\section*{Mocking in Unit Tests}
+Often, you'll want to test units that have external dependencies like databases or APIs. 
+In unit tests, these dependencies should be isolated using "mocks". Dart's \incode{mockito} package is an excellent tool for this purpose, which we will delve into in a subsequent section.
+
+\section*{Best Practices}
+\begin{enumerate}
+ \item \textbf{One Assertion per Test}: Ideally, each test should verify just one behavior.
+ \item \textbf{Descriptive Test Names}: Your test descriptions should explain what the test does, e.g., 'Calculating sum of two positive numbers'.
+ \item \textbf{Test Edge Cases}: Apart from the usual cases, test boundary and unexpected input cases.
+ \item \textbf{Keep Tests Independent}: One test should not depend on another. Each test should be standalone.
+\end{enumerate}
+
+\section*{Conclusion}
+Unit tests form the backbone of any software testing strategy. 
+They're vital for ensuring the correctness of individual units of code and building robust applications. 
+In upcoming sections, we'll explore advanced unit testing techniques, patterns, and tools that are pivotal in Dart.
