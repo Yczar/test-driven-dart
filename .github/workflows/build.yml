@@ -17,3 +17,4 @@ jobs:
         with:
           root_file: test-driven-dart.tex
           latexmk_use_lualatex: true
+          latexmk_shell_escape: true
