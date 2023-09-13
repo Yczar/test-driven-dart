@@ -89,14 +89,14 @@ mkdir test
 Inside the test directory, create a new file named \incode{sample_test.dart} and add the following content:
 
 \begin{dartcode}
-    import 'package:test/test.dart';
+import 'package:test/test.dart';
 
-    void main() {
-      test('String split', () {
-        var string = 'foo,bar,baz';
-        expect(string.split(','), equals(['foo', 'bar', 'baz']));
-      });
-    }
+void main() {
+  test('String split', () {
+    var string = 'foo,bar,baz';
+    expect(string.split(','), equals(['foo', 'bar', 'baz']));
+  });
+}
 \end{dartcode}
 
 \noindent\large{\textbf{5. Running the Test}}
