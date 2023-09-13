@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v3
-        run: mkdir build
+      - uses: actions/checkout@v3
+      - run: mkdir build
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
