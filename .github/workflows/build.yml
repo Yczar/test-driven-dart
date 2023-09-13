@@ -4,7 +4,7 @@ name: Build PDF
 on:
   push:
     branches:
-      - feat/create-pdf-format
+      - master
     
 jobs:
   build_latex:
