@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: test-driven-dart.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
+          args: "-outdir=build"
