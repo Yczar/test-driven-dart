@@ -36,7 +36,7 @@ Widget tests use the testWidgets function. Here's an example of testing a simple
 void main() {
   testWidgets('Renders a raised button', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(RaisedButton(onPressed: () {}, child: Text('Click me')));
+    await tester.pumpWidget(MaterialApp(home:RaisedButton(onPressed: () {}, child: Text('Click me'))));
 
     // Verify if the button is displayed.
     expect(find.byType(RaisedButton), findsOneWidget);
@@ -287,7 +287,7 @@ await tester.zoom(pinchStart: firstLocation, pinchEnd: secondLocation, scale: 2.
 To test widgets that scroll, like ListView or GridView:
 
 \begin{dartcode}
-await tester.scroll(find.byType(ListView), Offset(0, 500));  // Scroll by an offset
+  await tester.scrollUntilVisible(find.text('item $index'), Offset(0, 500), scrollable: find.byType(Scrollable);  // Scroll by an offset
 await tester.fling(find.byType(ListView), Offset(0, -500), 2500);  // Fling/quick scroll
 await tester.pumpAndSettle();
 \end{dartcode}
