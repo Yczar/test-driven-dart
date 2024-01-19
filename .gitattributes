@@ -1,2 +1,4 @@
 *.tex linguist-detectable=false
 *.sh linguist-detectable=false
+*Makefile linguist-detectable=false
+*.pdf linguist-detectable=false
